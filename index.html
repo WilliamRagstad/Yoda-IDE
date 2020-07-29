@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="js/highlight/styles/dracula.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Yoda Online IDE</title>
+</head>
+<body>
+    <section class="section" style="padding-bottom: 0">
+        <div class="center-content flex-col align-center">
+            <img src="imgs/yoda.png" id="logo">
+            <h1>Yoda Online IDE</h1>
+        </div>
+    </section>
+    <section class="section" style="padding-top: 1.5em;">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <h1>
+                        Yoda
+                    </h1>
+                    <pre><code id="yodaEditor" class="yoda" contenteditable>// Yoda code here
+(65, 35)add;
+(100, 50)add;
+{
+    return sum;
+    (sum + "Sum is: ")log.console;
+    a + b = sum;
+} function add(a,b)</code></pre>
+                </div>
+                <div class="column">
+                    <h1>
+                        Controls
+                    </h1>
+                    <div class="center-content flex-col controls">
+                        <div class="center-content targetLang">
+                            <button class="button is-primary" id="compileBtn">Compile</button>
+                            <select name="compileLang" id="compileLang">
+                                <option value="toJS">JavaScript</option>
+                                <option value="toTS">TypeScript</option>
+                                <option value="toCS">C#</option>
+                                <option value="toCS">Java</option>
+                                <option value="toCS">Python</option>
+                                <option value="toHaskell">Haskell</option>
+                            </select>
+                        </div>
+                        <button class="button is-primary" id="runBtn">Run</button>
+                    </div>
+                </div>
+                <div class="column">
+                    <h1>
+                        Output
+                    </h1>
+                    <pre><code id="output">// Target output code here</code></pre>
+                </div>
+            </div>
+            <div>
+                <h1>
+                    Console
+                </h1>
+                <pre><code id="consoleOutput" class="nohighlight hljs">[Console output]</code></pre>
+            </div>
+        </div>
+    </section>
+    
+</body>
+<script src="js/yoda.js"></script>
+<script src="js/highlight/highlight.pack.js"></script>
+<script src="js/syntax.js"></script>
+<script src="js/main.js"></script>
+</html>
